@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.12"/>
+  <requires lib="webkit2gtk" version="2.12"/>
+  <object class="GtkBox" id="Search">
+    <property name="name">Search</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="vexpand">True</property>
+    <property name="orientation">vertical</property>
+    <property name="baseline_position">top</property>
+    <child>
+      <object class="GtkButton" id="back5">
+        <property name="label">gtk-go-back</property>
+        <property name="name">table2</property>
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="receives_default">True</property>
+        <property name="halign">start</property>
+        <property name="valign">start</property>
+        <property name="relief">none</property>
+        <property name="use_stock">True</property>
+        <property name="always_show_image">True</property>
+        <signal name="activate" handler="change_screen" swapped="no"/>
+        <signal name="clicked" handler="change_screen" swapped="no"/>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">0</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkImage" id="logo3">
+        <property name="width_request">10</property>
+        <property name="height_request">10</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="halign">baseline</property>
+        <property name="valign">start</property>
+        <property name="hexpand">True</property>
+        <property name="vexpand">False</property>
+        <property name="pixbuf">img/logotrans.png</property>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">False</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="halign">center</property>
+        <property name="valign">start</property>
+        <property name="hexpand">True</property>
+        <property name="vexpand">False</property>
+        <property name="orientation">vertical</property>
+        <property name="baseline_position">top</property>
+        <child>
+          <object class="GtkGrid">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">center</property>
+            <property name="valign">start</property>
+            <property name="hexpand">False</property>
+            <property name="vexpand">False</property>
+            <child>
+              <object class="GtkComboBoxText" id="Filter">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <items>
+                  <item id="0" translatable="yes">Sort By</item>
+                  <item id="1" translatable="yes">Rating</item>
+                  <item id="2" translatable="yes">Author</item>
+                </items>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSearchEntry">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="halign">center</property>
+                <property name="valign">start</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="primary_icon_name">edit-find-symbolic</property>
+                <property name="primary_icon_activatable">False</property>
+                <property name="primary_icon_sensitive">False</property>
+                <signal name="search-changed" handler="search" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">2</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkScrolledWindow">
+        <property name="name">Search</property>
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="hexpand">True</property>
+        <property name="vexpand">True</property>
+        <property name="hscrollbar_policy">never</property>
+        <property name="kinetic_scrolling">False</property>
+        <property name="overlay_scrolling">False</property>
+        <child>
+          <object class="GtkViewport" id="seachParent">
+            <property name="name">Search</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+        </child>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">4</property>
+      </packing>
+    </child>
+  </object>
+  <object class="GtkFontButton">
+    <property name="visible">True</property>
+    <property name="can_focus">True</property>
+    <property name="receives_default">True</property>
+    <property name="font">Bauhaus Demi 12</property>
+    <property name="language">en-au</property>
+    <property name="preview_text">a</property>
+  </object>
+  <object class="GtkBox" id="listing">
+    <property name="name">listing</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkButton" id="back3">
+        <property name="label">gtk-go-back</property>
+        <property name="name">revel</property>
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="receives_default">True</property>
+        <property name="halign">start</property>
+        <property name="valign">start</property>
+        <property name="relief">none</property>
+        <property name="use_stock">True</property>
+        <property name="always_show_image">True</property>
+        <signal name="activate" handler="change_screen" swapped="no"/>
+        <signal name="clicked" handler="change_screen" swapped="no"/>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">0</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkScrolledWindow">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="hexpand">False</property>
+        <property name="vexpand">True</property>
+        <property name="kinetic_scrolling">False</property>
+        <property name="overlay_scrolling">False</property>
+        <child>
+          <object class="GtkViewport" id="responsibleParent">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <property name="hscroll_policy">natural</property>
+            <property name="vscroll_policy">natural</property>
+            <property name="shadow_type">none</property>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+        </child>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">2</property>
+      </packing>
+    </child>
+  </object>
+  <object class="GtkImage" id="menu_image">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="icon_name">open-menu-symbolic</property>
+  </object>
+  <object class="GtkRevealer" id="revel">
+    <property name="name">revel</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="hexpand">True</property>
+    <property name="transition_type">crossfade</property>
+    <property name="reveal_child">True</property>
+    <child>
+      <object class="GtkBox">
+        <property name="name">revel</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">4</property>
+        <property name="baseline_position">top</property>
+        <child>
+          <object class="GtkButton" id="back1">
+            <property name="label">gtk-go-back</property>
+            <property name="name">table2</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="halign">start</property>
+            <property name="valign">start</property>
+            <property name="relief">none</property>
+            <property name="use_stock">True</property>
+            <property name="always_show_image">True</property>
+            <signal name="activate" handler="change_screen" swapped="no"/>
+            <signal name="clicked" handler="change_screen" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkImage" id="logo2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="valign">start</property>
+            <property name="pixbuf">img/logotrans.png</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="name">revel</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hexpand">False</property>
+            <property name="vexpand">True</property>
+            <property name="kinetic_scrolling">False</property>
+            <property name="overlay_scrolling">False</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="name">revel</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="hscroll_policy">natural</property>
+                <property name="vscroll_policy">natural</property>
+                <property name="shadow_type">none</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="name">revel</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="vexpand">True</property>
+                    <property name="orientation">vertical</property>
+                    <property name="spacing">37</property>
+                    <property name="baseline_position">top</property>
+                    <child>
+                      <object class="GtkButton" id="k1">
+                        <property name="label" translatable="yes">SCP 001-999</property>
+                        <property name="name">listing</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <signal name="activate" handler="change_screen" swapped="no"/>
+                        <signal name="activate" handler="oh_no_list" swapped="no"/>
+                        <signal name="clicked" handler="change_screen" swapped="no"/>
+                        <signal name="clicked" handler="oh_no_list" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">10</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="k2">
+                        <property name="label" translatable="yes">SCP 1000-1999</property>
+                        <property name="name">listing</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <signal name="activate" handler="change_screen" swapped="no"/>
+                        <signal name="activate" handler="oh_no_list" swapped="no"/>
+                        <signal name="clicked" handler="change_screen" swapped="no"/>
+                        <signal name="clicked" handler="oh_no_list" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">10</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="k3">
+                        <property name="label" translatable="yes">SCP 2000-2999</property>
+                        <property name="name">listing</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <signal name="activate" handler="change_screen" swapped="no"/>
+                        <signal name="activate" handler="oh_no_list" swapped="no"/>
+                        <signal name="clicked" handler="change_screen" swapped="no"/>
+                        <signal name="clicked" handler="oh_no_list" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">10</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="k4">
+                        <property name="label" translatable="yes">SCP 3000-3999</property>
+                        <property name="name">listing</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <signal name="activate" handler="change_screen" swapped="no"/>
+                        <signal name="activate" handler="oh_no_list" swapped="no"/>
+                        <signal name="clicked" handler="change_screen" swapped="no"/>
+                        <signal name="clicked" handler="oh_no_list" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">10</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="k5">
+                        <property name="label" translatable="yes">SCP 4000-4999</property>
+                        <property name="name">listing</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <signal name="activate" handler="change_screen" swapped="no"/>
+                        <signal name="activate" handler="oh_no_list" swapped="no"/>
+                        <signal name="clicked" handler="change_screen" swapped="no"/>
+                        <signal name="clicked" handler="oh_no_list" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">10</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="k6">
+                        <property name="label" translatable="yes">SCP 5000-6999</property>
+                        <property name="name">listing</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="margin_bottom">66</property>
+                        <signal name="activate" handler="change_screen" swapped="no"/>
+                        <signal name="activate" handler="oh_no_list" swapped="no"/>
+                        <signal name="clicked" handler="change_screen" swapped="no"/>
+                        <signal name="clicked" handler="oh_no_list" swapped="no"/>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">10</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkBox" id="searchedScp">
+    <property name="name">searchedScp</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkButton" id="back6">
+        <property name="label">gtk-go-back</property>
+        <property name="name">Search</property>
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="receives_default">True</property>
+        <property name="halign">start</property>
+        <property name="valign">start</property>
+        <property name="relief">none</property>
+        <property name="use_stock">True</property>
+        <property name="always_show_image">True</property>
+        <signal name="activate" handler="change_screen" swapped="no"/>
+        <signal name="clicked" handler="change_screen" swapped="no"/>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">0</property>
+      </packing>
+    </child>
+    <child>
+      <object class="WebKitWebView" id="searchedview">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="hexpand">True</property>
+        <property name="vexpand">True</property>
+        <property name="settings">settings1</property>
+        <property name="is_controlled_by_automation">True</property>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+  </object>
+  <object class="WebKitSettings" id="settings1">
+    <property name="javascript_can_open_windows_automatically">True</property>
+    <property name="enable_private_browsing">True</property>
+    <property name="enable_developer_extras">True</property>
+    <property name="user_agent">Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Safari/605.1.15</property>
+    <property name="allow_file_access_from_file_urls">True</property>
+    <property name="allow_universal_access_from_file_urls">True</property>
+    <property name="allow_top_navigation_to_data_urls">True</property>
+  </object>
+  <object class="GtkOverlay" id="randomScp">
+    <property name="name">randomScp</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkBox">
+        <property name="name">randomScp</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkButton" id="back2">
+            <property name="label">gtk-go-back</property>
+            <property name="name">table2</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="halign">start</property>
+            <property name="valign">start</property>
+            <property name="relief">none</property>
+            <property name="use_stock">True</property>
+            <property name="always_show_image">True</property>
+            <signal name="activate" handler="change_screen" swapped="no"/>
+            <signal name="clicked" handler="change_screen" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="WebKitWebView" id="randomview">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <property name="settings">settings1</property>
+            <property name="is_controlled_by_automation">True</property>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+      <packing>
+        <property name="index">-1</property>
+      </packing>
+    </child>
+  </object>
+  <object class="GtkBox" id="selectedSCP">
+    <property name="name">selectedSCP</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkButton" id="back4">
+        <property name="label">gtk-go-back</property>
+        <property name="name">listing</property>
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="receives_default">True</property>
+        <property name="halign">start</property>
+        <property name="valign">start</property>
+        <property name="relief">none</property>
+        <property name="use_stock">True</property>
+        <property name="always_show_image">True</property>
+        <signal name="activate" handler="change_screen" swapped="no"/>
+        <signal name="clicked" handler="change_screen" swapped="no"/>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">0</property>
+      </packing>
+    </child>
+    <child>
+      <object class="WebKitWebView" id="specificView">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="hexpand">True</property>
+        <property name="vexpand">True</property>
+        <property name="settings">settings1</property>
+        <property name="is_controlled_by_automation">True</property>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">True</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+  </object>
+  <object class="GtkBox" id="table2">
+    <property name="name">table2</property>
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkImage" id="logo1">
+        <property name="width_request">10</property>
+        <property name="height_request">10</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <property name="hexpand">True</property>
+        <property name="vexpand">True</property>
+        <property name="pixbuf">img/logotrans.png</property>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">False</property>
+        <property name="position">0</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkButton" id="Database">
+        <property name="label" translatable="yes">SCP Database</property>
+        <property name="name">revel</property>
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="focus_on_click">False</property>
+        <property name="receives_default">True</property>
+        <property name="halign">center</property>
+        <property name="valign">start</property>
+        <property name="margin_bottom">50</property>
+        <signal name="activate" handler="change_screen" swapped="no"/>
+        <signal name="clicked" handler="change_screen" swapped="no"/>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">False</property>
+        <property name="position">1</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkButton" id="searchButton">
+        <property name="label" translatable="yes">Search</property>
+        <property name="name">Search</property>
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="focus_on_click">False</property>
+        <property name="receives_default">True</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <property name="margin_bottom">50</property>
+        <signal name="activate" handler="change_screen" swapped="no"/>
+        <signal name="clicked" handler="change_screen" swapped="no"/>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">False</property>
+        <property name="padding">6</property>
+        <property name="position">2</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkButton" id="random">
+        <property name="label" translatable="yes">Random SCP</property>
+        <property name="name">randomScp</property>
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="focus_on_click">False</property>
+        <property name="receives_default">True</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <property name="margin_bottom">50</property>
+        <signal name="activate" handler="change_screen" swapped="no"/>
+        <signal name="clicked" handler="change_screen" swapped="no"/>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">False</property>
+        <property name="position">3</property>
+      </packing>
+    </child>
+  </object>
+  <object class="GtkWindow" id="homepage">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">SCP Database</property>
+    <property name="icon">img/logo.png</property>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="headbar">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="spacing">0</property>
+        <property name="show_close_button">True</property>
+        <child>
+          <object class="GtkMenuButton" id="CoolSettingsMenu">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="image">menu_image</property>
+            <property name="popover">programSettings</property>
+          </object>
+          <packing>
+            <property name="pack_type">end</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox" id="mainwindow">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkPopover" id="programSettings">
+    <property name="can_focus">False</property>
+    <property name="margin_left">5</property>
+    <property name="margin_right">5</property>
+    <property name="margin_bottom">5</property>
+    <property name="relative_to">CoolSettingsMenu</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkGrid">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkButton" id="FirstSetting">
+                <property name="label" translatable="yes">Le Butt</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="halign">start</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">YOOOOOOOOOOO</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLinkButton">
+            <property name="label" translatable="yes">button</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="relief">none</property>
+            <property name="uri">Bruh</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">LaBel</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
